@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Launch Academy" %></title>
+
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="#">
+
+          </a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+        <ul class="right">
+          <li class="active"><a href="#">ABOUT</a></li>
+          <li class="active"><a href="#">COMPANIES</a></li>
+          <li class="active"><a href="#">MENTORS</a></li>
+          <li class="active"><a href="#">SPACE</a></li>
+          <li class="active"><a href="#">CONTACT</a></li>
+        </ul>
+      </section>
+    </nav>
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  database: newla
+  username: postgres
+  password: carina
+  pool: 5
+  timeout: 5000
+  encoding: utf8
